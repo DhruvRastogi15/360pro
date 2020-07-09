@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class login extends Component {
+class Home extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,4 +16,4 @@ Dhruv
   }
 }
 
-export default login;
+export default Home;
