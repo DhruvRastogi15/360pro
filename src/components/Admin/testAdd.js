@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as testActions from "../../actions/testActions";
-import { confirmAlert } from "react-confirm-alert";
+
 
 class TestAdd extends Component {
     constructor() {
@@ -8,7 +8,8 @@ class TestAdd extends Component {
         this.state = {
             email: "",
             password: "",
-            isAdmin:false
+            isAdmin:false,
+            userData: {}
         };
     }
 
@@ -19,21 +20,7 @@ class TestAdd extends Component {
             password: this.state.password
           };
           testActions.addTest(requestObj).then(res => {
-            confirmAlert({
-              title: "Added Succesfully!",
-      
-              buttons: [
-                {
-                  label: "OK",
-                  onClick: () => {
-                    this.props.history.push({
-                      pathname: "/adminDashboard",
-                      state: this.state.userData
-                    });
-                  }
-                }
-              ]
-            });
+            
           });
     }
 
