@@ -13,14 +13,19 @@ class TestAdd extends Component {
         };
     }
 
+    componentDidMount() {
+      console.log("IN MOUNT ::React PDF Viewer  props");
+    }
 
     onSubmit = () => {
         const requestObj = {
             email: this.state.email,
             password: this.state.password
           };
+
+          
           testActions.addTest(requestObj).then(res => {
-            
+            alert(JSON.stringify(res))
           });
     }
 

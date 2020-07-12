@@ -10,3 +10,14 @@ export const addTest = testData => {
   return Details;
 
 };
+
+export const getAllTest = () => {
+  var methodType = "GET";
+  var APIPath = "/test/getAllTest";
+  var parameters = {};
+  var Details = Config.backendAPICall(methodType, APIPath,parameters).then(res => {
+    return res;
+  })
+  return Details;
+
+};

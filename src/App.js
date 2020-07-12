@@ -6,7 +6,7 @@ import Home from "./components/layout/home";
 import Login from "./components/layout/login";
 import Admin from "./components/Admin/admin";
 import TestAdd from "./components/Admin/testAdd";
-
+import TestGet from "./components/Admin/testGet";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/admin" component={Admin} />
         <Route exact path="/testAdd" component={TestAdd} />
+        <Route exact path="/testGet" component={TestGet} />
       </div>
     </Router>
   );
