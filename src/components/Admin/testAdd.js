@@ -14,7 +14,7 @@ class TestAdd extends Component {
     }
 
     componentDidMount() {
-      console.log("IN MOUNT ::React PDF Viewer  props");
+     
     }
 
     onSubmit = () => {
@@ -25,7 +25,11 @@ class TestAdd extends Component {
 
           
           testActions.addTest(requestObj).then(res => {
-            alert(JSON.stringify(res))
+            alert(JSON.stringify(res.message))
+            if(res.status==="OK"){
+              // window.location.reload();
+              this.props.history.push('/testGet')
+            }
           });
     }
 

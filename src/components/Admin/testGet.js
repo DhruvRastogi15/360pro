@@ -20,7 +20,7 @@ class TestGet extends Component {
   
   getAllManagers() {
     testActions.getAllTest().then(testData => {
-        alert(testData)
+        alert(JSON.stringify(testData))
       for (let i = 0; i < testData.data.length; i++) {
         testData.data[i].updatedAt = getFormattedDate(
           testData.data[i].updatedAt
