@@ -11,9 +11,9 @@ export const addTest = testData => {
 
 };
 
-export const getAllTest = () => {
+export const getAllTestAction = () => {
   var methodType = "GET";
-  var APIPath = "/test/getAllTest";
+  var APIPath = "/test/getTest";
   var parameters = {};
   var Details = Config.backendAPICall(methodType, APIPath,parameters).then(res => {
     return res;
